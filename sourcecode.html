@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Theme made with tons of love by sebastian waters (sebastianandthesadness.tumblr.com)! 
+Theme Name: "Just Like F21"
+Theme Creator: sebastianandthesadness.tumblr.com
+Installation Instructions: Install from Theme Garden (possible release on GitHub from the creator's blog)
+Questions, Comments, Issues, etc? Ask for help at: sebastianandthesadness.tumblr.com/ask
+
+NOTE: This theme is styled in admiration of the Forever 21 clothing company's website. Forever 21 did / does not endorse this theme, and did not create it. By creating and styling this theme similarly to the Forever 21 Website, the Creator of the theme does not wish that it be regarded as a product of Forever 21, or wish to mimic the styling of Forever 21's website in any wrongful way. Thank you for your understanding.
+
+:) Enjoy the theme!
+-->
+<title>{block:TagPage}{Tag} - {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+			{block:Description} <meta name="description" content="{MetaDescription}" /> {/block:Description}
+<link rel="alternate" type="application/rss+xml" title="{Title} RSS" href="{RSS}"/>
+<script type="text/javascript">
+<!--
+function handleThis(formElm)
+{
+window.location="http://{BlogURL}/tagged/"+formElm.number.value+"";
+return false;
+}
+</script>
+<link rel="shortcut icon" href="{Favicon}">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+{CustomCSS}
+    html, body {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+    }
+	header {
+	    background: rgb(213, 213, 213); 
+        background: rgba(213, 213, 213, .8);
+		position: fixed;
+		width: 100%;
+		display: block;
+		padding: 0;
+		border-bottom: 1px solid;
+		max-height: 300px;
+		text-align: center;
+	}
+	header a {
+		text-decoration: none;
+    	color: #000000;
+	}
+	h1 {
+		display: block;
+    	top: 60px;
+		font-size: 30px;
+		color: #000000;
+		text-transform: uppercase;
+		font-family: 'Oswald', sans-serif;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+	h2 {
+		display: inline;
+		color: #000;
+		top: 120px;
+		font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		padding: 0;
+		margin: 0;
+	}
+	body {
+		background: #eee;
+		font-family: sans-serif;
+	}
+	.post {
+		background: #fff;
+		margin: 40px auto;
+		padding: 20px;
+		border-radius: 6px;
+		border: 1px solid #d5d5d5;
+		width: 640px;
+	}
+	.avatar {
+		border-radius: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container {
+		margin: 0 auto; 
+		padding: 0;
+		width: 100%;
+		display: block;
+	}
+	.like-reblog {
+		list-style: none;
+		border: 1px solid #d5d5d5;
+	}
+	.like-reblog li {
+		float: right;
+		padding: 6px;
+		height: 20px;
+	} 
+	.page {
+	  background: #222;
+	  padding: 20px;
+	}
+	.page a {
+	  text-decoration: none;
+	  color: #eee;
+	}
+	.pagelist {
+	  margin: 0 auto;
+	  width: 640px;
+	}
+	#masterblock {
+	    padding-top: 250px
+	}
+	.pagenav {
+	    background-color: #000;
+	    color: #fff;
+	    clear: both;
+        position: relative;
+        z-index: 10;
+        height: 3em;
+        margin-top: -3em;
+	}
+	.pagenav a {
+	    text-decoration: none;
+	    color: #fff;
+	    font-family: 'Roboto', sans-serif;
+	    text-align: center;
+	    display: block;
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.topbar {
+	    background-color: #000;
+	    width: 100%;
+	    overflow: hidden;
+	}
+	.searchform {
+	    margin-right: 0;
+	    float: left;
+	}
+	#query {
+	    background-color: #000;
+	    border: 1px solid #fff;
+	}
+	#button {
+	    background-color: #000;
+	    border: 1px solid #fff;
+	    color: #fff;
+	}
+	.years {
+	    text-align: center;
+	    background: #000;
+	    color: #fff;
+	}
+	#ask {
+	    font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		padding: 0;
+		margin: 0;
+	}
+	#archive {
+	    font-size: 14px;
+		font-family: 'Roboto', sans-serif;
+		padding: 0;
+		margin: 0;
+	}
+	.container ul {
+	    display: block;
+	    width: 200px;
+	    margin: auto;
+	    font-family: 'Roboto', sans-serif;
+	}
+	.container ul li {
+	    list-style: none;
+	    float: left;
+	    padding-right: 10px;
+	    font-family: 'Roboto', sans-serif;
+	}
+	.sourcenote {
+	    color: #d5d5d5;
+	    display: inline-block;
+	}
+	.postsource {
+	    display: inline-block;
+	    text-decoration: none;
+	    color: #d5d5d5;
+	}
+	}
+</style>
+</head>
+
+<body>
+	<header>
+	<div class="topbar">
+	<div class="searchform">
+	    <form onsubmit="return handleThis(this)">
+<input id="query" type="text" name="number" onclick="submit" />
+<input id="button" type="submit" value="Search" />
+</form>
+</div>
+	</div>
+	<div class="container">
+	    <h1><a href="{BlogURL}">{Title}</a></h1>
+		<img class="avatar" src="{PortraitURL-64}">
+			<h2>{Description}</h2>
+			<ul>
+			{block:AskEnabled}
+    <li><p id="ask"><a href="{BlogURL}ask">{AskLabel}</a></p></li>
+    <li><p id="archive"><a href="{BlogURL}archive">Archive</a></p></li>
+    {/block:AskEnabled}
+    </ul>
+	</div>
+	</header>
+<div id="masterblock">	
+	{block:HasPages}
+	<div class="page">
+	{block:Pages}
+	<div class="pagelist">
+	<a href="{URL}">{Label}</a>{/block:Pages}
+	</div>
+	</div>
+	{/block:HasPages}
+	{block:Posts}
+	
+		{block:Text}
+		<div class="post">
+		{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{block:Title}
+				<h3>
+					<a href="{Permalink}">{Title}</a>
+				</h3>
+			{/block:Title}
+			{Body}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Text}
+
+		{block:Photo} 
+		<div class="post">
+				{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
+			{block:Caption}{Caption}{/block:Caption}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Photo}
+
+		{block:Quote}
+		<div class="post">
+						{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{Quote}
+	   	{block:Source}<br>&mdash;{Source}{/block:Source}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Quote}
+
+		{block:Link}
+		<div class="post">
+				{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+  			<a href="{URL}" {Target}>{Name}</a>
+  			{block:Description}{Description}{/block:Description}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Link}
+
+		{block:Chat}
+		<div class="post">
+				{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{block:Title}{Title}{/block:Title}
+			<table>
+				{block:Lines}
+				<tr>
+					<th>{block:Label}{Label}{/block:Label}</th>
+					<td>{Line}</td>
+				</tr>
+				{/block:Lines}
+			</table>
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Chat}
+
+		{block:Audio}
+		<div class="post">
+				{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{AudioPlayer}
+      	{block:Caption}{Caption}{/block:Caption}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Audio}
+
+		{block:Video}
+		<div class="post">
+				{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+			{Video-500}
+			{block:Caption}{Caption}{/block:Caption}
+			<ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+		{/block:Video}
+		
+		{block:Answer}
+		<div class="post">
+		{block:ContentSource}<p class="sourcenote">Source:</p><a href="{SourceURL}" class="postsource">{SourceTitle}</a>{/block:ContentSource}
+<div class="answer inner">
+    <h1 class="title">{Question}</h1>
+    <div class="user"><img src="{AskerPortraitURL-96}"/><p>{Asker}</p></div>
+    {Answer}
+    </div>
+    <ul class="like-reblog">
+				<li>{LikeButton}</li>
+				<li>{ReblogButton}</li>
+				<li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+				<li>{block:Date}<a href="{Permalink}">{TimeAgo}</a>{/block:Date}</li>
+			</ul>
+		</div>
+		{block:PostNotes}{PostNotes}{/block:PostNotes}
+{/block:Answer}
+
+	{/block:Posts}
+	{block:Pagination}
+		<div class="pagenav">
+	{block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}
+	{block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
+	</div>
+	{/block:Pagination}
+	<div class="years">{CopyrightYears}</div>
+</div>
+</body>
+</html>
